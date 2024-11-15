@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./variable.scss";
+
+.main-container {
+    min-height: calc(100vh - #{$navbar-height});
+}
