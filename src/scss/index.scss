@@ -1,6 +1,240 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./variable.scss";
+@import "./navbar.scss";
+@import "./button.scss";
+@import "./modal.scss";
+
+.btn {
+    transition: none;
+}
 
 .main-container {
     min-height: calc(100vh - #{$navbar-height});
+    position: relative;
+  }
+  
+  .form-control {
+    border: 1px solid black;
+    border-radius: 0px;
+    font-size: 11px;
+    padding-top: 0.55rem;
+    height: 40px;
+    margin-bottom: 20px;
+  
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #bababa;
+    }
+  
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #bababa;
+    }
+  
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #bababa;
+    }
+  
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: #bababa;
+    }
+  
+    &:focus,
+    &:focus-visible,
+    &:active {
+      outline: 0px;
+      box-shadow: none;
+      border-color: black;
+    }
+  }
+  
+.login {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f1f4f6;
+    .login-wrapper {
+        background-color: white;
+        width: 328px;
+        min-height: 350px;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        .login-buttons {
+            margin-top: 15px;
+        }
+        form {
+            margin: auto;
+        }
+    }
+}
+.first-page {
+    max-width: 700px;
+    border: 1px solid;
+    padding: 50px;
+    border-radius: 25px;
+    ul {
+        margin-top: 1rem;
+    }
+}
+
+.list-container {
+    max-width: 1519px;
+  
+    h1 {
+      padding: 10.5vh 0 10vh;
+    }
+  
+    table {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 11px;
+      line-height: 15px;
+      border-collapse: separate;
+      border-spacing: 0;
+      position: relative;
+  
+      button {
+        padding: 0 4px;
+      }
+  
+      > img {
+        position: absolute;
+        border: 0px !important;
+  
+        &:first-of-type {
+          top: 0%;
+          transform: translate(-25%, -50%);
+          left: 0%;
+          z-index: 0;
+        }
+  
+        &:last-of-type {
+          bottom: 0%;
+          transform: translate(25%, 50%);
+          right: 0%;
+          z-index: 0;
+        }
+      }
+    }
+  
+    thead {
+      position: relative;
+      z-index: 1;
+    }
+  
+    th {
+      background-color: black;
+      color: white;
+      font-weight: 500;
+      width: 20%;
+      padding: 23px 0px;
+      border: 1px;
+      border-right: 1px solid grey;
+      border-left: 1px solid grey;
+  
+      &:first-of-type {
+        border-top-left-radius: 20px;
+      }
+  
+      &:last-of-type {
+        border-top-right-radius: 20px;
+        border-left: 1px solid grey;
+        border-right: 1px solid black;
+      }
+    }
+  
+    td {
+      background-color: $quinary-color;
+      padding: 43px 0px;
+      border: 1px solid gray;
+      z-index: 1;
+      position: relative;
+    }
+    p {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    td:last-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      min-width: 100px;
+  
+      .btn {
+        display: block;
+        margin: auto 0;
+        border: 0px;
+        background-color: transparent;
+      }
+    }
+  
+    tr:last-of-type {
+      td {
+        border-bottom: 2px solid gray;
+      }
+  
+      td:first-of-type {
+        border-bottom-left-radius: 20px;
+        border-left: 2px solid gray;
+      }
+  
+      td:last-child {
+        border-bottom-right-radius: 20px;
+        border-right: 2px solid gray;
+      }
+    }
+}
+
+.opinions-table {
+  td {
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+  }
+  td:last-of-type {
+    display: table-cell;
+    .btn {
+      margin: auto;
+    }
+  }
+  p {
+    position: static;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    max-height: 100px; /* ustaw maksymalną wysokość */
+    overflow: hidden; /* ukrywa nadmiar treści, która wykracza poza określony obszar */
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* liczba linii, po której tekst ma być obcinany */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}
+
+.value-select{
+  width: auto;
+  position: absolute;
+  right: 3%;
+  top: 160px;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+
+  .form-select {
+    filter: grayscale(100%);
+    font-size: 11px;
+    height: 36px;
+    line-height: 1;
+  }
 }

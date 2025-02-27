@@ -1,0 +1,14 @@
+<svg id="badge_black_24dp" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_4500" data-name="Group 4500">
+    <rect id="Rectangle_2027" data-name="Rectangle 2027" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_4502" data-name="Group 4502">
+    <g id="Group_4501" data-name="Group 4501">
+      <rect id="Rectangle_2028" data-name="Rectangle 2028" width="4" height="1.5" transform="translate(14 12)" fill="#fff"/>
+      <rect id="Rectangle_2029" data-name="Rectangle 2029" width="4" height="1.5" transform="translate(14 15)" fill="#fff"/>
+      <path id="Path_1487" data-name="Path 1487" d="M20,7H15V4a2.006,2.006,0,0,0-2-2H11A2.006,2.006,0,0,0,9,4V7H4A2.006,2.006,0,0,0,2,9V20a2.006,2.006,0,0,0,2,2H20a2.006,2.006,0,0,0,2-2V9A2.006,2.006,0,0,0,20,7ZM11,7V4h2V9H11Zm9,13H4V9H9a2.006,2.006,0,0,0,2,2h2a2.006,2.006,0,0,0,2-2h5Z" fill="#fff"/>
+      <circle id="Ellipse_42" data-name="Ellipse 42" cx="1.5" cy="1.5" r="1.5" transform="translate(7.5 12)" fill="#fff"/>
+      <path id="Path_1488" data-name="Path 1488" d="M11.08,16.18a5.246,5.246,0,0,0-4.16,0A1.506,1.506,0,0,0,6,17.57V18h6v-.43A1.506,1.506,0,0,0,11.08,16.18Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

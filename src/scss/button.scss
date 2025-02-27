@@ -1,0 +1,123 @@
+.btn-primary {
+    &:focus-visible,
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+  
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    transition: 0.6s;
+    height: 40px;
+
+    &:hover {
+        transition: 0.3s;
+    }
+    
+    &.btn-danger {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    
+        &:hover {
+            background-color: black;
+        }
+    }
+    
+    img {
+        transition: 0.6s;
+    }
+    
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+        border: 1px solid $primary-color;
+    
+        img {
+            filter: invert(100%);
+        }
+    }
+    
+    &.btn-big {
+        height: 80px;
+        font-size: 13px;
+        padding-left: 129px;
+        padding-right: 129px;
+        border-radius: 40px;
+    }
+    
+    &:focus-visible,
+    &:focus,
+    &:active,
+    &:active:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+button {
+    &:focus-visible,
+    &:focus,
+    &:active,
+    &:active:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.btn.btn-black {
+    color: white;
+    background-color: black;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+
+    &:focus:active,
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+        transition: 0.3s;
+    }
+
+    &:active,
+    &:focus-visible,
+    &:focus {
+        background-color: black;
+    }
+}
+
+.btn.btn-white {
+    color: black;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+    border: 1px solid black;
+  
+    &:focus:active,
+    &:hover,
+    &.selected {
+        background-color: $primary-color !important;
+        color: white !important;
+        transition: 0.3s;
+    }
+  
+    &:active,
+    &:focus-visible,
+    &:focus {
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+}

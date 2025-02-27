@@ -1,0 +1,92 @@
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    height: $navbar-height;
+
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        justify-content: space-around;
+        padding-left: 48px;
+        padding-right: 48px;
+        .nav-link {
+            color: white;
+            margin-right: 23px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            img {
+                margin-bottom: 3px;
+                margin-right: 10px;
+            }
+        }
+        .nav-link:first-of-type {
+            padding-left: 0px;
+        }
+        button {
+            color: white;
+            margin-right: 23px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            font-size: 13px;
+            img {
+                margin-bottom: 3px;
+                margin-right: 10px;
+            }
+        }
+        button:first-of-type {
+            padding-left: 0px;
+        }
+    }
+
+    button {
+        border: 0px;
+        background-color: transparent;
+        padding-right: 0px;
+    
+        &:focus-visible,
+        &:focus,
+        &:active,
+        &:hover {
+            border: 0px;
+            background-color: transparent;
+            outline: none;
+            box-shadow: none;
+    
+            img {
+                filter: invert(0);
+            }
+        }
+    }
+
+    .account {
+        background-color: $primary-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .nav-links {
+        padding-right: 50px;
+        button {
+            background-color: transparent;
+            padding: 0;
+            border:  none;
+            &:hover {
+                border: 0px;
+                background-color: transparent;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .nav-language {
+            color: white;
+            margin-left: 10px;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+    }
+}
