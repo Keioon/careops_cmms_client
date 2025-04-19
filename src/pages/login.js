@@ -28,9 +28,9 @@ const Login = () => {
           password: password,
         };
 
-        const url = Constants.API_URL_LOGIN;
+        const url = Constants.API_URL_EMPLOYEE_LOGIN;
 
-        axios.defaults.headers.common['Authorization'] = '';
+        axios.defaults.headers.common['Authorization'] = Constants.SigningKey;
         if(params.email) {
             axios
                 .post(`${url}`, params, {
@@ -41,6 +41,7 @@ const Login = () => {
                 )
                 .then((response) => {
                     console.log(response);
+                    console.log("token: ", response.data.token);
                     // const user = {
                     //     id: response.data.id,
                     //     name: response.data.name,
@@ -53,16 +54,20 @@ const Login = () => {
                     // };
                     // window.location.reload();
                     // setUser(user);
-                    if(user.role = 'ROLE_ADMIN') {
-                        // navigate('/usersList');
-                    } else {
-                        // navigate(`/userData/${user.id}`);
-                    }
+                    // if(user.role = 'ROLE_ADMIN') {
+                    //     // navigate('/usersList');
+                    // } else {
+                    //     // navigate(`/userData/${user.id}`);
+                    // }
                 })
                 .catch((err) => {
-                    // console.log(err.response.data);
+                    console.log(err);
                     setShowAlert(true)
-                    setAlert(err.response.data.message);
+                    if(err.response && err.response.data && err.response.data.message) {
+                        setAlert(err.response.data.message);
+                    } else {
+                        setAlert('Nieznany błąd.');
+                    }
                 });
         }
     }

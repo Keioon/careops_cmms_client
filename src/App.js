@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes, useNavigate, BrowserRouter, Navigate } from "react-router-dom";
 import Constants from "./utilities/Constants";
 import Login from "./pages/login";
+import SubmissionList from "./pages/submissionList";
 import Layout from "./pages/layout";
 import Register from "./pages/register";
 
@@ -14,6 +15,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/list" element={<SubmissionList />} />
         </Route>
       </Routes>
       {/* <header className="App-header">
